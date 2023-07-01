@@ -1,0 +1,10 @@
+{
+  "name": "crypto.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Yoshihiro Tanaka <contact@cordea.jp>",
+  "license": "Apache-2.0"
+}
