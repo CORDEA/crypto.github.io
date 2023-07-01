@@ -2,9 +2,19 @@
   "name": "crypto.github.io",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
+  "main": "index.html",
   "scripts": {
+    "build": "node scripts/build.mjs",
+    "format": "prettier --write src"
   },
   "author": "Yoshihiro Tanaka <contact@cordea.jp>",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "esbuild": "0.18.10",
+    "prettier": "2.8.8"
+  },
+  "dependencies": {
+    "@fluentui/web-components": "^2.5.15"
+  }
 }
