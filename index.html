@@ -8,9 +8,10 @@
 </head>
 <body>
 <div id="container">
+    <fluent-text-field id="key" appearance="outline" placeholder="Key"></fluent-text-field>
     <fluent-text-field id="text" appearance="outline" placeholder="Text"></fluent-text-field>
-    <div id="switch">
-        <fluent-switch>
+    <div id="switch-container">
+        <fluent-switch id="switch">
             <span slot="unchecked-message">Encrypt</span>
             <span slot="checked-message">Decrypt</span>
         </fluent-switch>

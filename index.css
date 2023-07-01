@@ -10,11 +10,15 @@ body {
     align-items: flex-start;
 }
 
-#text {
+fluent-text-field {
     align-self: stretch;
 }
 
-#switch {
+#text {
+    margin-top: 16px;
+}
+
+#switch-container {
     margin: 32px 0;
     align-self: end;
 }
