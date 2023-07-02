@@ -18,6 +18,9 @@ async function onButtonClick() {
         ['encrypt', 'decrypt']
     );
     if (decrypt) {
+        const decoded = Uint8Array.from(atob(text), (e) => e.codePointAt(0))
+        const iv = decoded.slice(0, 12)
+        const encrypted = decoded.slice(12)
         return
     }
     const iv = window.crypto.getRandomValues(new Uint8Array(12))
