@@ -6,7 +6,7 @@
   "main": "index.html",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "format": "prettier --write src"
+    "format": "prettier --write ./"
   },
   "author": "Yoshihiro Tanaka <contact@cordea.jp>",
   "license": "Apache-2.0",

@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
     <script src="dist/index.js"></script>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-<div id="container">
-    <fluent-text-field id="key" appearance="outline" placeholder="Key"></fluent-text-field>
-    <fluent-text-field id="text" appearance="outline" placeholder="Text"></fluent-text-field>
-    <div id="switch-container">
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="container">
+      <fluent-text-field
+        id="key"
+        appearance="outline"
+        placeholder="Key"
+      ></fluent-text-field>
+      <fluent-text-field
+        id="text"
+        appearance="outline"
+        placeholder="Text"
+      ></fluent-text-field>
+      <div id="switch-container">
         <fluent-switch id="switch">
-            <span slot="unchecked-message">Encrypt</span>
-            <span slot="checked-message">Decrypt</span>
+          <span slot="unchecked-message">Encrypt</span>
+          <span slot="checked-message">Decrypt</span>
         </fluent-switch>
+      </div>
+      <fluent-divider></fluent-divider>
+      <fluent-button id="button" appearance="accent">Submit</fluent-button>
     </div>
-    <fluent-divider></fluent-divider>
-    <fluent-button id="button" appearance="accent">Submit</fluent-button>
-</div>
-</body>
+  </body>
 </html>

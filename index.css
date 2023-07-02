@@ -1,29 +1,29 @@
 body {
-    margin: 128px 32px;
+  margin: 128px 32px;
 }
 
 #container {
-    width: max(50%, 500px);
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  width: max(50%, 500px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 fluent-text-field {
-    align-self: stretch;
+  align-self: stretch;
 }
 
 #text {
-    margin-top: 16px;
+  margin-top: 16px;
 }
 
 #switch-container {
-    margin: 32px 0;
-    align-self: end;
+  margin: 32px 0;
+  align-self: end;
 }
 
 #button {
-    margin: 16px 0;
-    align-self: end;
+  margin: 16px 0;
+  align-self: end;
 }
