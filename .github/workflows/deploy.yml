@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
   workflow_dispatch:
 
@@ -18,14 +18,14 @@ jobs:
       - run: |
           npm ci
           npm run build
-          mv index.html index.css dist/
+          mv index.html dist/
       - uses: actions/checkout@v3
         with:
           ref: pages
           clean: false
       - run: |
-          mv dist/index.html dist/index.css ./
-          git add *.html *.css dist/
+          mv dist/index.html ./
+          git add *.html dist/
       - run: |
           git config user.name "Yoshihiro Tanaka"
           git config user.email "contact@cordea.jp"
