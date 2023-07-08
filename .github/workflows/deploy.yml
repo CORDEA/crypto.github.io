@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 18
       - run: |
+          npm ci
           npm run build
           mv index.html index.css dist/
       - uses: actions/checkout@v3
