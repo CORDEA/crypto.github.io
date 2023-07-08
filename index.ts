@@ -10,6 +10,7 @@ provideFluentDesignSystem().register(allComponents);
 
 const ALGORITHM = "AES-GCM";
 
+let decryptSwitch: Switch;
 let keyTextField: TextField;
 let keyCounter: HTMLLabelElement;
 
@@ -17,7 +18,7 @@ async function onButtonClick() {
   const textField = document.querySelector<TextField>("#text");
   const text = textField.value;
   const encoded = new TextEncoder().encode(text);
-  const decrypt = document.querySelector<Switch>("#switch").checked;
+  const decrypt = decryptSwitch.checked;
   const key = await window.crypto.subtle.importKey(
     "raw",
     new TextEncoder().encode(keyTextField.value),
@@ -35,6 +36,7 @@ async function onButtonClick() {
       encrypted
     );
     textField.value = new TextDecoder().decode(decrypted);
+    decryptSwitch.checked = false;
     return;
   }
   const iv = window.crypto.getRandomValues(new Uint8Array(12));
@@ -49,6 +51,7 @@ async function onButtonClick() {
   textField.value = btoa(
     Array.from(result, (e) => String.fromCodePoint(e)).join("")
   );
+  decryptSwitch.checked = true;
 }
 
 function onKeyChanged(this: HTMLInputElement) {
@@ -65,6 +68,7 @@ function onLoad() {
   document
     .querySelector<Button>("#button")
     .addEventListener("click", onButtonClick);
+  decryptSwitch = document.querySelector<Switch>("#switch");
   keyCounter = document.querySelector<HTMLLabelElement>("#key-counter");
   keyTextField = document.querySelector<TextField>("#key");
   keyTextField.addEventListener("input", onKeyChanged);
