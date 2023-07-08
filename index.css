@@ -23,6 +23,19 @@ fluent-text-field {
   align-self: end;
 }
 
+#key-counter {
+  font-family: var(--body-font);
+  font-size: var(--type-ramp-base-font-size);
+  line-height: var(--type-ramp-base-line-height);
+  margin-top: 4px;
+  align-self: end;
+  color: var(--neutral-foreground-rest);
+}
+
+#key-counter.invalid {
+  color: #d13438;
+}
+
 #button {
   margin: 16px 0;
   align-self: end;
